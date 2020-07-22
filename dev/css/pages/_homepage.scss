@@ -1,9 +1,9 @@
 
 html, body {
     height: 100%;
-    width: 100%;
+    width: 100vw;
     font-family: 'Roboto', sans-serif;
-    background-color: $colorvert;
+    
 }
 
 h1, h2, h3, h4{
@@ -13,12 +13,33 @@ h1, h2, h3, h4{
 h1{
   font-size: 3rem;
 }
-
+.h1_vert{
+  color: $colorvert;
+}
+.h1_milieu{
+  text-align: center;
+}
 h3{
   font-family: 'Oswald', sans-serif;
 }
+.h3_gris{
+  color: $colorgris;
+}
+h4{
+  font-size: 1.6rem;
+}
 a{
   text-decoration: none;
+  color: white;
+}
+a .a_btn{
+  margin-top: 2rem;
+  background: $colorvert;
+  text-align: center;
+  width: 15rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  z-index: 2;
 }
 
 ul {
@@ -29,17 +50,26 @@ nav a{
   color: white;
 }
 
+
+// debut nav
 nav{
   height: 5rem;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   background-color: transparent;
-  border-bottom: 1rem solid $colorblanc;
+  border-bottom: 0.1rem solid $colorblanc;
+  z-index: 10;
+  margin-right: 0;
 }
 
 nav input{
   display: none;
+
+}
+
+nav #menuToggle{
+  display: inline-block;
 }
 
 header{
@@ -47,6 +77,29 @@ header{
   height: 100%;
 }
 
+#menu{
+  display: flex;
+}
+
+#menu h1{
+padding-right: 40rem;
+
+margin: 0;
+
+}
+#menu li{
+padding-right: 2rem;
+padding-top: 1rem;
+
+}
+
+#menu li:hover{
+  color: $colorgris;
+  transition: ease-in-out;
+  animation-duration: 1s;
+  }
+
+// debut nav
 
 
 @media (max-width: 640px) {
@@ -55,8 +108,7 @@ header{
    display: block;
    position: relative;
    top: 50px;
-   left: 50px;
-   
+   right: 0;   
    z-index: 1;
    
    -webkit-user-select: none;
@@ -194,17 +246,22 @@ header{
 
 }
  
+// fin nav
 
 
 
 //    swippper
 
 .swiper-container {
-    margin-top: 10rem;
-    height: 300px;
+    height: 100vh;
+       
+    
     .swiper-slide {
+        // z-index: 5;
+        
         background: #ccc;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         font-size: 2rem ;
@@ -221,7 +278,167 @@ header{
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
+        width: 33%;
+
+        p{
+          font-family: 'Roboto', sans-serif;
+          font-size: 1.5rem;
+          z-index: 2;
+        }
+        h1{
+          z-index: 2;
+        }
+        a{
+          margin-top: 2rem;
+          background: $colorvert;
+          text-align: center;
+          width: 15rem;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          z-index: 2;
+        }
     }
     
   }
+
+
+  .swiper-slide:before{
+    z-index: 1;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+      }
+
+  // .swiper-pagination{
+  //   background: $colorvert;
+  // }
+
+.margin{
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+  p{
+    color: $colorgris;
+    font-size: 1.3rem;
+  }
+  @media (max-width: 640px) {
+    margin-top: 7rem;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 640px) {
+  .deux{
+  margin-top: 0rem;
+  margin-bottom: 0;
+  }
+}
+
+.container{
+  width: 100vw;
+  margin-top: 10rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //height: 100%;
+  @media (max-width: 640px) {
+    margin: 0;
+  }
+}
+
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+  img{
+    width: 100%,
+  }
+}
+
+  
+
+.flexy{
+  
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 5rem;
+  @media (max-width: 640px) {
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+  }
+}
+
+
+  @media (max-width: 640px) {
+    h2, h3{
+      margin-bottom: 0.2rem;
+  }
+    h3{
+      margin-top: 0.5rem;
+    }
+    img{
+      margin-top: 2rem;
+    }
+}
+
+.annonces{
+  padding-bottom: 15rem;
+  @media (max-width: 640px) {
+    padding-bottom: 5rem;
+
+  }
+}
+
+.one_people{
+  background-color: $colorvert;
+  h2, h3{
+  padding-left: 1rem;
+  }
+  h3{
+    text-transform: none;
+    padding-bottom: 1rem;
+  }
+}
+
+.team{
+  margin-bottom: 10rem;
+}
+
+.backgroundgreen{
+  background: $colorvert;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.cathegory{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  img{
+    width: 2rem;
+  }
+}
+
+.property{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  p{
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+
+
+
 

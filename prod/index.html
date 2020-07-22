@@ -7,7 +7,7 @@
 
     <title>Home</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto:ital,wght@0,100;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <!-- <link rel="stylesheet" href="css/style.css">  -->
    <link rel="stylesheet" href="css/aos-css-hack6.css">
@@ -15,7 +15,7 @@
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
    <!-- <link href="plugin-frameworks/swiper.css" rel="stylesheet"> -->
    <link rel="icon" type="image/gif" href="https://giphy.com/gifs/Ii4jfLGmdmWWhcVTG3/html5">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    
    
@@ -26,33 +26,20 @@
 
 
 <header>
-<!--    Made by Erik Terwan    -->
-<!--   24th of November 2015   -->
-<!--        MIT License        -->
+
 <nav role="navigation">
   <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
+   
     <input type="checkbox" />
     
-    <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
+   
     <span></span>
     <span></span>
     <span></span>
     
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
+    
     <ul id="menu">
-      <a href="#"><li> <h1>Warehousee</h1></li></a>
+      <a href="#"><h1>Warehousee</h1></a>
       <a href="#"><li>Home</li></a>
       <a href="#"><li>Properties</li></a>
       <a href="#"><li>Agents</li></a>
@@ -68,41 +55,39 @@
   <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide" style="background-image:url(./img/hero_2.jpg);">
-        <h1 class="h1_vert">Buy & Sell Property Here</h1>
-        <p class="p_blanc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vitae, aut inventore repellendus. Iusto, assumenda! </p>
-        <a href="#">Get Started</a>
+        <h1>Buy & Sell Property Here</h1>
+        <p class="p_blanc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Provident vitae, aut inventore repellendus. Iusto, assumenda! </p>
+        <a class="a_bnt" href="#">Get Started</a>
       </div>
       <div class="swiper-slide" style="background-image:url(./img/hero_1.jpg);">
-        <h1 class="h1_vert">Find Your Perfect Property For Your Home</h1>
-        <p class="p blanc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vitae, aut inventore repellendus. Iusto, assumenda! </p>
-        <a href="#">Get Started</a>
+        <h1>Find Your Perfect Property For Your Home</h1>
+        <p class="p blanc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Provident vitae, aut inventore repellendus. Iusto, assumenda! </p>
+        <a class="a_bnt" href="#">Get Started</a>
       </div>
       <div class="swiper-slide" style="background-image:url(./img/hero_2.jpg);">
-        <h1 class="h1_vert">Buy & Sell Property Here</h1>
-        <p class="p_blanc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vitae, aut inventore repellendus. Iusto, assumenda! </p>
-        <a href="#">Get Started</a>
+        <h1>Buy & Sell Property Here</h1>
+        <p class="p_blanc">Lorem ipsum dolor sit amet, consectetur adipisicing <br> elit. Provident vitae, aut inventore repellendus. Iusto, assumenda! </p>
+        <a class="a_bnt" href="#">Get Started</a>
       </div>
       <!-- <div class="swiper-slide" ><img src="img/0893793976d1dd2b4d44f6bc49f8d0df.jpg" alt=""></div> -->
         
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
+  <!-- Add Pagination -->
+  
+    <div class="swiper-pagination"></div>
 </div>
 </header>
 
+<div class="margin">
+  <h1 class="h1_vert seul">Our Outstanding houses</h1>
+</div>
 <!-- grand container -->
 <div class="container">
 
-
+  
+  
   <!-- annonces -->
   <section class="flex annonces">
-    <h1 class="h1_vert">Our Outstanding houses</h1>
 
     <div class="flexy cadre">
       <img src="./img/property_1.jpg" alt="cheminée">
@@ -112,14 +97,14 @@
     </div>
 
     <div class="flexy cadre">
-      <img src="./img/property_2-sm.jpg" alt="salon">
+      <img src="./img/property_2.jpg" alt="salon">
       <h2 class="h2_noir">La maisonnette toute propre</h2>
       <h3 class="h3_gris">Ottignies - BEL</h3>
       <h3 class="h3_gris">$1,000 </h3>
     </div>
 
     <div class="flexy cadre">
-      <img src="./img/property_2-sm.jpg" alt="salon">
+      <img src="./img/property_3.jpg" alt="salon">
       <h2 class="h2_noir">Digital City dans 20 ans</h2>
       <h3 class="h3_gris">Auderghem - BEL</h3>
       <h3 class="h3_gris">$40,000,000 </h3>
@@ -127,8 +112,15 @@
 
   </section>
   <!-- fin annonces -->
+</div>
+<div class="margin deux">
+  <h1 class="h1_vert seul">Real Estate Agents</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima neque 
+  tempora reiciendis.</p>
+</div>
 
 
+<div class="container">
   <!-- team -->
   <section class="flex team">
     <div class="flexy one_people">
@@ -150,38 +142,63 @@
     </div>
   </section>
   <!-- fin team -->
+</div>
 
-  <!-- green section -->
-  <section class="flex work_green">
+
+<div class="backgroundgreen">
+  <div class="h1_milieu greensection">
     <h1 class="h1_noir">How It Works</h1>
-
-   <div class="flexy property">
-     <p>01.</p>
-     <div class="custom-icon flaticon-house text-black"></div>
-     <h4 class="h4_noir">Find Property.</h4>
-     <p class="noir">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-   </div>
-
-   <div class="flexy property">
-    <p>02.</p>
-    <div class="custom-icon flaticon-home text-black"></div>
-    <h4 class="h4_noir">Outstanding Houses.h4>
-    <p class="noir">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 
-  <div class="flexy property">
-    <p>03.</p>
-    <div class="custom-icon flaticon-coin text-black"></div>
-    <h4 class="h4_noir">Buy Property.</h4>
-    <p class="noir">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <div class="container">
+    <!-- green section -->
+    <section class="flex work_green">
+
+      <div class="flexy property">
+        <div class="cathegory">
+          <p>01.</p>
+          <img src="./fonts/flaticon/font/dollar.svg" alt="dollard">
+        </div>
+        
+        <h4 class="h4_noir">Find Property.</h4>
+        <p class="noir">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+
+      <div class="hr_fond_green">
+        <hr>
+      </div>
+
+      <div class="flexy property">
+        <div class="cathegory">
+          <p>02.</p>
+          <img src="./fonts/flaticon/font/dollar.svg" alt="dollard">
+        </div>
+        <h4 class="h4_noir">Outstanding Houses.</h4>
+        <p class="noir">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+
+      <div class="flexy property">
+        <div class="cathegory">
+          <p>03.</p>
+          <img src="./fonts/flaticon/font/dollar.svg" alt="dollard">
+        </div>
+        <h4 class="h4_noir">Buy Property.</h4>
+        <p class="noir">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+
+    </section>
+  </div>  
+</div>  
+ <!--end green section -->
+
+
+  <div class="h1_milieu">
+  <h1 class="h1_vert">How It Works</h1>  
   </div>
-
-  </section>
-  <!--end green section -->
-
+<div class="container"> 
   <!-- blog -->
   <section class="flex blog">
-    <h1 class="h1_vert">How It Works</h1>
+   
     <div class="flexy blogy">
       <a href=""><img src="./img/img_1.jpg" alt="chairs"></a>
       <a href=""><h4 class="h4_noir">News title 1</h2></a>
@@ -214,7 +231,7 @@
 
   </section>
   <!-- end blog -->
-
+</div>
   <!-- contact -->
   <section>
     
