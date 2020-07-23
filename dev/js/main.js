@@ -6,3 +6,17 @@ var swiper = new Swiper('.swiper-container', {
     clickable: true,
   },
 });
+
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 300) {
+	    $("#menu").css("background" , "white");
+	  }
+
+	  else{
+		  $("#menu").css("background" , "transparent");  	
+	  }
+  })
+})

@@ -204,6 +204,10 @@ h4 {
   font-size: 1.6rem;
 }
 
+.h4_noir {
+  color: #000;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -257,9 +261,21 @@ header {
   display: flex;
 }
 
+.scroll_menu {
+  width: 80vw;
+  padding: 0;
+  margin: 0;
+}
+
 #menu h1 {
   padding-right: 40rem;
   margin: 0;
+}
+
+@media (max-width: 640px) {
+  #menu h1 {
+    padding-right: 0;
+  }
 }
 
 #menu li {
@@ -276,11 +292,20 @@ header {
 }
 
 @media (max-width: 640px) {
+  #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #menuToggle {
     display: block;
     position: relative;
-    top: 50px;
-    right: 0;
+    top: 30px;
+    left: 10px;
     z-index: 1;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -311,8 +336,8 @@ header {
     -webkit-touch-callout: none;
   }
   /*
-  * Just a quick hamburger
-  */
+* Just a quick hamburger
+*/
   #menuToggle span {
     display: block;
     width: 33px;
@@ -338,9 +363,9 @@ header {
             transform-origin: 0% 100%;
   }
   /* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
+* Transform all the slices of hamburger
+* into a crossmark.
+*/
   #menuToggle input:checked ~ span {
     opacity: 1;
     -webkit-transform: rotate(45deg) translate(-2px, -1px);
@@ -348,27 +373,28 @@ header {
     background: #232323;
   }
   /*
-  * But let's hide the middle one.
-  */
+* But let's hide the middle one.
+*/
   #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     -webkit-transform: rotate(0deg) scale(0.2, 0.2);
             transform: rotate(0deg) scale(0.2, 0.2);
   }
   /*
-  * Ohyeah and the last one should go the other direction
-  */
+* Ohyeah and the last one should go the other direction
+*/
   #menuToggle input:checked ~ span:nth-last-child(2) {
     -webkit-transform: rotate(-45deg) translate(0, -1px);
             transform: rotate(-45deg) translate(0, -1px);
   }
   /*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
+* Make this absolute positioned
+* at the top left of the screen
+*/
   #menu {
     position: absolute;
     width: 300px;
+    height: 70vh;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
@@ -390,8 +416,8 @@ header {
     font-size: 22px;
   }
   /*
-  * And let's slide it in from the left
-  */
+* And let's slide it in from the left
+*/
   #menuToggle input:checked ~ ul {
     -webkit-transform: none;
             transform: none;
@@ -427,12 +453,14 @@ header {
 
 .swiper-container .swiper-slide p {
   font-family: 'Roboto', sans-serif;
+  text-align: center;
   font-size: 1.5rem;
   z-index: 2;
 }
 
 .swiper-container .swiper-slide h1 {
   z-index: 2;
+  text-align: center;
 }
 
 .swiper-container .swiper-slide a {
@@ -443,6 +471,12 @@ header {
   padding: 1rem;
   border-radius: 0.5rem;
   z-index: 2;
+}
+
+.swiper-container .swiper-slide a:hover {
+  background-color: #000;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .swiper-slide:before {
@@ -457,6 +491,7 @@ header {
 }
 
 .margin {
+  margin-top: 6rem;
   margin-left: 2rem;
   margin-bottom: 5rem;
 }
@@ -513,6 +548,9 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100vw;
 }
 
@@ -546,6 +584,31 @@ header {
   }
 }
 
+.cadre:hover {
+  background: #000;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.cadre:hover .h2_noir {
+  color: #fff;
+}
+
+.cadre:hover .animation_cadre {
+  padding-left: 2rem;
+}
+
+.cadre:hover img {
+  margin-left: 0;
+  margin-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
 @media (max-width: 640px) {
   h2, h3 {
     margin-bottom: 0.2rem;
@@ -559,7 +622,7 @@ header {
 }
 
 .annonces {
-  padding-bottom: 15rem;
+  padding-bottom: 6rem;
 }
 
 @media (max-width: 640px) {
@@ -570,6 +633,7 @@ header {
 
 .one_people {
   background-color: #37cfa2;
+  overflow: hidden;
 }
 
 .one_people h2, .one_people h3 {
@@ -579,6 +643,13 @@ header {
 .one_people h3 {
   text-transform: none;
   padding-bottom: 1rem;
+}
+
+.one_people img:hover {
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .team {
@@ -609,6 +680,12 @@ header {
   width: 2rem;
 }
 
+@media (max-width: 640px) {
+  .cathegory img {
+    margin-top: 0;
+  }
+}
+
 .property {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,5 +698,160 @@ header {
 
 .property p {
   font-family: 'Roboto', sans-serif;
+  line-height: 1.4rem;
+}
+
+.h1_milieu {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .h1_milieu {
+    padding-bottom: 5rem;
+  }
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+.blogy {
+  margin-right: 2rem;
+}
+
+.blogy:nth-of-type(3) {
+  margin-right: 0;
+  padding-right: 5rem;
+}
+
+.blog_settings {
+  color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog_settings p {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.blog_settings a {
+  color: #37cfa2;
+}
+
+.container_contact {
+  margin-bottom: 0;
+}
+
+.contact {
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+.contact a {
+  color: #37cfa2;
+}
+
+.bg_grey {
+  background-color: #dad6d6;
+  width: 100vw;
+}
+
+.contact_left {
+  width: 50%;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  height: 2rem;
+  width: 28rem;
+}
+
+@media (max-width: 640px) {
+  input {
+    width: 18rem;
+  }
+}
+
+input[type=submit] {
+  margin-top: 2rem;
+  background: #37cfa2;
+  text-align: center;
+  border-radius: 0.5rem;
+  z-index: 2;
+  color: #fff;
+}
+
+.hover:hover {
+  background-color: #000;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+footer {
+  padding-left: 2rem;
+  background: #1f1d1d;
+}
+
+footer .flex {
+  width: 100vw;
+}
+
+footer .h4_noir {
+  color: #fff;
+}
+
+footer p {
+  color: grey;
+  line-height: 1.8rem;
+}
+
+.left {
+  padding-right: 24rem;
+  max-width: 70%;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 640px) {
+  .left {
+    padding-right: 0;
+    padding-bottom: 3rem;
+  }
+}
+
+.right {
+  padding-left: -20rem;
+  max-width: 30%;
+}
+
+.social_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 640px) {
+  .copyright p {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
