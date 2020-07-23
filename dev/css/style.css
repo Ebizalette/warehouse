@@ -265,6 +265,7 @@ header {
   width: 80vw;
   padding: 0;
   margin: 0;
+  color: #000;
 }
 
 #menu h1 {
@@ -330,21 +331,16 @@ header {
     left: -5px;
     cursor: pointer;
     opacity: 0;
-    /* hide this */
     z-index: 2;
-    /* and place it over the hamburger */
     -webkit-touch-callout: none;
   }
-  /*
-* Just a quick hamburger
-*/
   #menuToggle span {
     display: block;
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cdcdcd;
+    background: #fff;
     border-radius: 3px;
     z-index: 1;
     -webkit-transform-origin: 4px 0px;
@@ -362,35 +358,21 @@ header {
     -webkit-transform-origin: 0% 100%;
             transform-origin: 0% 100%;
   }
-  /* 
-* Transform all the slices of hamburger
-* into a crossmark.
-*/
   #menuToggle input:checked ~ span {
     opacity: 1;
     -webkit-transform: rotate(45deg) translate(-2px, -1px);
             transform: rotate(45deg) translate(-2px, -1px);
     background: #232323;
   }
-  /*
-* But let's hide the middle one.
-*/
   #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     -webkit-transform: rotate(0deg) scale(0.2, 0.2);
             transform: rotate(0deg) scale(0.2, 0.2);
   }
-  /*
-* Ohyeah and the last one should go the other direction
-*/
   #menuToggle input:checked ~ span:nth-last-child(2) {
     -webkit-transform: rotate(-45deg) translate(0, -1px);
             transform: rotate(-45deg) translate(0, -1px);
   }
-  /*
-* Make this absolute positioned
-* at the top left of the screen
-*/
   #menu {
     position: absolute;
     width: 300px;
@@ -401,7 +383,6 @@ header {
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
     -webkit-transform-origin: 0% 0%;
             transform-origin: 0% 0%;
     -webkit-transform: translate(-100%, 0);
@@ -415,9 +396,6 @@ header {
     padding: 10px 0;
     font-size: 22px;
   }
-  /*
-* And let's slide it in from the left
-*/
   #menuToggle input:checked ~ ul {
     -webkit-transform: none;
             transform: none;
@@ -551,7 +529,6 @@ header {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 100vw;
 }
 
 @media (max-width: 640px) {
@@ -758,7 +735,7 @@ h4 {
 }
 
 .bg_grey {
-  background-color: #dad6d6;
+  background-color: #f1f0f0;
   width: 100vw;
 }
 
@@ -852,6 +829,160 @@ footer p {
 @media (max-width: 640px) {
   .copyright p {
     margin: 0;
+  }
+}
+
+.blog_single {
+  padding-left: 2rem;
+  padding-top: 10rem;
+  background: white;
+}
+
+.blog_single .flex {
+  width: 100vw;
+}
+
+.blog_single .h4_noir {
+  color: #fff;
+}
+
+.blog_single p {
+  color: grey;
+  line-height: 1.8rem;
+}
+
+.blog_single a {
+  color: #37cfa2;
+}
+
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.page_blog_settings {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .page_blog_settings {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.page_blog_settings p {
+  margin-top: 0;
+  font-size: 1rem;
+  color: white;
+}
+
+.swiper-container .swiper-slide .page_blog_settings a {
+  color: white;
+  background-color: transparent;
+  margin-top: 0;
+  padding: 1rem;
+  text-decoration: underline;
+}
+
+.swiper-container .swiper-slide a:hover {
+  background-color: transparent;
+}
+
+input {
+  width: 100%;
+  height: 5rem;
+}
+
+.blog_single .right a {
+  margin-top: 2rem;
+  padding: 0.8rem;
+  background: #37cfa2;
+  text-align: center;
+  border-radius: 0.5rem;
+  z-index: 2;
+  color: #fff;
+}
+
+.cadre:hover {
+  background: transparent;
+  margin-left: 0;
+  margin-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.cadre:hover .h2_noir {
+  color: #000;
+}
+
+.cadre:hover .animation_cadre {
+  padding-left: 0;
+}
+
+.cadre:hover img {
+  margin-left: 0;
+  margin-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .right, .left {
+    min-width: 80vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .property-single-page-swiper {
+    display: none;
+  }
+}
+
+.property-single-page-swiper {
+  width: 40rem;
+}
+
+.animation_cadre .property-single-page-hide-img {
+  display: none;
+}
+
+.cadre .img_ronde {
+  padding-top: 3rem;
+  width: 25%;
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+  .flex .blog_single_property {
+    /* margin-left: 2rem; */
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .espace {
+    margin-bottom: 5rem;
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

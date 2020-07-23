@@ -1,0 +1,42 @@
+.property-single-page-swiper{
+    @media (max-width: 640px) {
+    //    max-width: 90%;
+    //    max-height: 20%;
+       display: none;
+
+    }
+}
+
+.property-single-page-swiper{
+    width: 40rem;
+}
+
+
+.animation_cadre .property-single-page-hide-img{
+    display: none;
+}
+
+.cadre .img_ronde{
+    padding-top: 3rem;
+     width: 25%;
+    // height: 5rem;
+    border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+    .flex .blog_single_property{
+    /* margin-left: 2rem; */
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    margin-left: 0;
+    padding-left: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .espace{
+margin-bottom: 5rem;
+margin-left: 0;
+
+    }
+}    

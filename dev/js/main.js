@@ -12,11 +12,11 @@ $(document).ready(function(){
   $(window).scroll(function(){
   	var scroll = $(window).scrollTop();
 	  if (scroll > 300) {
-	    $("#menu").css("background" , "white");
+	    $("nav").css({"background": "lightgrey" , "color": "#000"});
 	  }
 
 	  else{
-		  $("#menu").css("background" , "transparent");  	
+		  $("nav").css("background" , "transparent");  	
 	  }
   })
 })
