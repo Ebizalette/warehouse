@@ -6,11 +6,20 @@
 
     }
 }
-
-.property-single-page-swiper{
-    width: 40rem;
+.swiper-container.property-single-page-swiper{
+    width: 300%;
 }
-
+// .property-single-page-swiper{
+//     width: 40rem;
+// }
+.cadre.pashover:hover{
+  
+    background: transparent;
+    margin-left: 0;
+    margin-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
 
 .animation_cadre .property-single-page-hide-img{
     display: none;

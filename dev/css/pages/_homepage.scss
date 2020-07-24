@@ -93,6 +93,7 @@ display: flex;
   padding: 0;
   margin: 0;
   color: #000;
+  // animation: ;
 }
 
 #menu h1{
@@ -236,6 +237,9 @@ animation-duration: 1s;
  
  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
+#menu a{
+scroll-behavior: smooth;
+}
 
 #menu li
 {
@@ -283,7 +287,7 @@ animation-duration: 1s;
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
-      width: 33%;
+      // width: 33%;
 
       p{
         font-family: 'Roboto', sans-serif;

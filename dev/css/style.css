@@ -392,6 +392,9 @@ header {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
+  #menu a {
+    scroll-behavior: smooth;
+  }
   #menu li {
     padding: 10px 0;
     font-size: 22px;
@@ -426,7 +429,6 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 33%;
 }
 
 .swiper-container .swiper-slide p {
@@ -901,7 +903,7 @@ footer p {
   text-decoration: underline;
 }
 
-.swiper-container .swiper-slide a:hover {
+.swiper-container .swiper-slide a .asingle:hover {
   background-color: transparent;
 }
 
@@ -920,7 +922,7 @@ input {
   color: #fff;
 }
 
-.cadre:hover {
+.cadre.pashover:hover {
   background: transparent;
   margin-left: 0;
   margin-top: 0;
@@ -928,15 +930,15 @@ input {
   padding-bottom: 0;
 }
 
-.cadre:hover .h2_noir {
+.cadre.pashover:hover .h2_noir {
   color: #000;
 }
 
-.cadre:hover .animation_cadre {
+.cadre.pashover:hover .animation_cadre {
   padding-left: 0;
 }
 
-.cadre:hover img {
+.cadre.pashover:hover img {
   margin-left: 0;
   margin-top: 0;
   padding-right: 0;
@@ -955,8 +957,16 @@ input {
   }
 }
 
-.property-single-page-swiper {
-  width: 40rem;
+.swiper-container.property-single-page-swiper {
+  width: 300%;
+}
+
+.cadre.pashover:hover {
+  background: transparent;
+  margin-left: 0;
+  margin-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 .animation_cadre .property-single-page-hide-img {
